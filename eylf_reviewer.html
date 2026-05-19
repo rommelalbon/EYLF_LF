@@ -1,0 +1,2065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title> Early Years - Pre-Primary Teacher Reviewer | Golden International School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Palette inspired directly by EYLF V2.0 document */
+    --eylf-blue: #1E78BE;
+    --eylf-blue-deep: #155A8F;
+    --eylf-blue-soft: #D8EAF6;
+    --eylf-pink: #E5447B;            /* Principles wedge */
+    --eylf-pink-soft: #FCE3EC;
+    --eylf-purple: #6F4A9C;          /* Practices wedge */
+    --eylf-purple-soft: #ECE3F4;
+    --eylf-green: #4FA053;           /* Learning Outcomes wedge */
+    --eylf-green-soft: #E2F1E0;
+    --eylf-yellow: #F2C94C;
+    --eylf-yellow-soft: #FFF4D1;
+    --eylf-orange: #E88A3E;
+    --eylf-cream: #FBF7F0;
+    --eylf-ink: #1f2a37;
+    --eylf-ink-soft: #4a5568;
+    --eylf-paper: #FFFDF9;
+
+    --radius-xs: 12px;
+    --radius-sm: 18px;
+    --radius-md: 28px;
+    --radius-lg: 42px;
+    --radius-pill: 999px;
+
+    --shadow-soft: 0 4px 20px rgba(30, 120, 190, 0.08);
+    --shadow-md: 0 10px 40px rgba(30, 120, 190, 0.12);
+    --shadow-lg: 0 20px 60px rgba(30, 120, 190, 0.18);
+
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--eylf-ink);
+    background: var(--eylf-cream);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ===== Decorative background blobs ===== */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, var(--eylf-pink-soft) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -300px; left: -200px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, var(--eylf-blue-soft) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  /* ===== NAVIGATION ===== */
+  .top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(251, 247, 240, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(30, 120, 190, 0.08);
+    padding: 16px 0;
+  }
+  .nav-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--eylf-blue-deep);
+  }
+  .brand-mark {
+    width: 38px; height: 38px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--eylf-blue) 0%, var(--eylf-pink) 100%);
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: 800;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    box-shadow: var(--shadow-soft);
+  }
+  .nav-links {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--eylf-ink-soft);
+    font-weight: 500;
+    font-size: 0.92rem;
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    transition: all 0.2s ease;
+  }
+  .nav-links a:hover {
+    background: var(--eylf-blue-soft);
+    color: var(--eylf-blue-deep);
+  }
+
+  /* ===== CONTAINER ===== */
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 80px 0 60px;
+    position: relative;
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid rgba(30, 120, 190, 0.12);
+    padding: 8px 18px;
+    border-radius: var(--radius-pill);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--eylf-blue-deep);
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-soft);
+  }
+  .hero-tag-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--eylf-green);
+    box-shadow: 0 0 0 4px rgba(79, 160, 83, 0.2);
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--eylf-blue-deep);
+    margin-bottom: 24px;
+    max-width: 920px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--eylf-pink);
+  }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--eylf-ink-soft);
+    max-width: 720px;
+    margin-bottom: 36px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .meta-chip {
+    background: white;
+    padding: 12px 20px;
+    border-radius: var(--radius-pill);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--eylf-ink);
+    box-shadow: var(--shadow-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .meta-chip strong {
+    color: var(--eylf-blue-deep);
+    font-weight: 700;
+  }
+
+  /* ===== TRAINER NOTE ===== */
+  .trainer-note {
+    background: linear-gradient(135deg, var(--eylf-yellow-soft) 0%, #FFF9E5 100%);
+    border: 1.5px solid var(--eylf-yellow);
+    border-radius: var(--radius-lg);
+    padding: 32px 36px;
+    margin: 40px 0 60px;
+    position: relative;
+  }
+  .trainer-note-label {
+    display: inline-block;
+    background: var(--eylf-orange);
+    color: white;
+    padding: 6px 16px;
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .trainer-note h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--eylf-blue-deep);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .trainer-note p {
+    color: var(--eylf-ink);
+    max-width: 780px;
+  }
+
+  /* ===== SECTION TITLES ===== */
+  .section {
+    padding: 60px 0;
+  }
+  .section-header {
+    margin-bottom: 40px;
+  }
+  .section-eyebrow {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--eylf-pink);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 600;
+    color: var(--eylf-blue-deep);
+    letter-spacing: -0.015em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .section-lead {
+    font-size: 1.05rem;
+    color: var(--eylf-ink-soft);
+    max-width: 720px;
+  }
+
+  /* ===== FRAMEWORK PILLARS (Belonging Being Becoming) ===== */
+  .bbb-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .bbb-card {
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .bbb-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .bbb-card .glyph {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 0.9;
+    opacity: 0.18;
+    position: absolute;
+    top: 20px; right: 24px;
+  }
+  .bbb-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  .bbb-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.94;
+    position: relative;
+  }
+  .bbb-card.belonging { background: linear-gradient(135deg, #1E78BE 0%, #155A8F 100%); }
+  .bbb-card.being { background: linear-gradient(135deg, #E5447B 0%, #B82E5E 100%); }
+  .bbb-card.becoming { background: linear-gradient(135deg, #4FA053 0%, #2F7A33 100%); }
+
+  /* ===== TAB MODULE ===== */
+  .module-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 0;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    border: 1px solid rgba(30, 120, 190, 0.06);
+  }
+  .tab-bar {
+    display: flex;
+    gap: 4px;
+    background: var(--eylf-cream);
+    padding: 8px;
+    border-radius: 0;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    flex: 1;
+    min-width: 140px;
+    padding: 14px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--eylf-ink-soft);
+    border-radius: var(--radius-pill);
+    transition: all 0.2s ease;
+  }
+  .tab-btn:hover { color: var(--eylf-blue-deep); }
+  .tab-btn.active {
+    background: white;
+    color: var(--eylf-blue-deep);
+    box-shadow: var(--shadow-soft);
+  }
+  .tab-content {
+    padding: 40px 44px;
+  }
+  .tab-pane { display: none; }
+  .tab-pane.active { display: block; animation: fadeIn 0.4s ease; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Lists in tabs */
+  .pane-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .item-pill {
+    background: var(--eylf-blue-soft);
+    border-radius: var(--radius-md);
+    padding: 18px 22px;
+    border-left: 4px solid var(--eylf-blue);
+    transition: transform 0.2s ease;
+  }
+  .item-pill:hover { transform: translateX(4px); }
+  .item-pill.pink { background: var(--eylf-pink-soft); border-left-color: var(--eylf-pink); }
+  .item-pill.purple { background: var(--eylf-purple-soft); border-left-color: var(--eylf-purple); }
+  .item-pill.green { background: var(--eylf-green-soft); border-left-color: var(--eylf-green); }
+  .item-pill h4 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--eylf-blue-deep);
+    margin-bottom: 6px;
+  }
+  .item-pill p {
+    font-size: 0.88rem;
+    color: var(--eylf-ink-soft);
+    line-height: 1.5;
+  }
+
+  /* ===== OUTCOME ACCORDION ===== */
+  .outcomes-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .outcome-card {
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    border: 1.5px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  .outcome-card.open { border-color: var(--eylf-green); }
+  .outcome-header {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 24px 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: var(--font-body);
+  }
+  .outcome-number {
+    width: 54px; height: 54px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--eylf-green) 0%, #2F7A33 100%);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-soft);
+  }
+  .outcome-title {
+    flex: 1;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--eylf-blue-deep);
+  }
+  .outcome-toggle {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--eylf-cream);
+    display: grid;
+    place-items: center;
+    color: var(--eylf-blue-deep);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+  .outcome-card.open .outcome-toggle { transform: rotate(45deg); }
+  .outcome-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .outcome-card.open .outcome-body { max-height: 3000px; }
+  .outcome-content {
+    padding: 0 28px 28px 28px;
+  }
+  .outcome-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 16px;
+  }
+  .pillar-block {
+    background: var(--eylf-green-soft);
+    border-radius: var(--radius-sm);
+    padding: 20px 22px;
+  }
+  .pillar-block h5 {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #2F7A33;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .pillar-block ul {
+    list-style: none;
+    padding: 0;
+  }
+  .pillar-block li {
+    font-size: 0.88rem;
+    color: var(--eylf-ink);
+    padding: 6px 0 6px 22px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .pillar-block li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 13px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--eylf-green);
+    opacity: 0.4;
+  }
+
+  /* Sub-outcomes nav (reserved for future use) */
+
+  /* ===== PLANNING CYCLE ===== */
+  .cycle-wrap {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 50px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    position: relative;
+  }
+  .cycle-container {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 1;
+    margin: 0 auto;
+  }
+  .cycle-svg { width: 100%; height: 100%; overflow: visible; }
+  .cycle-center {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    width: 70%;
+  }
+  .cycle-center h4 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--eylf-blue-deep);
+    font-weight: 700;
+  }
+  .cycle-center p {
+    font-size: 0.72rem;
+    color: var(--eylf-ink-soft);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+  }
+  .cycle-segment {
+    cursor: pointer;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    transform-origin: 0 0;
+  }
+  .cycle-segment:hover { opacity: 0.92; }
+  .cycle-segment.selected { opacity: 1; }
+  .cycle-detail {
+    margin-top: 30px;
+    padding: 24px 28px;
+    background: var(--eylf-cream);
+    border-radius: var(--radius-md);
+    text-align: left;
+    min-height: 100px;
+  }
+  .cycle-detail h5 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--eylf-blue-deep);
+    margin-bottom: 8px;
+  }
+
+  /* ===== DIAGRAM 1 — Elements of the EYLF (concentric circles) ===== */
+  .diagram1-wrap {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .diagram1-svg-holder {
+    aspect-ratio: 1;
+    max-width: 420px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .diagram1-legend h4 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--eylf-blue-deep);
+    margin-bottom: 8px;
+  }
+  .diagram1-legend p {
+    color: var(--eylf-ink-soft);
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+  .legend-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  .legend-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  .legend-item strong {
+    font-family: var(--font-display);
+    color: var(--eylf-blue-deep);
+    font-weight: 700;
+  }
+  .legend-item p {
+    font-size: 0.88rem;
+    margin: 0;
+    color: var(--eylf-ink-soft);
+  }
+  @media (max-width: 880px) {
+    .diagram1-wrap { grid-template-columns: 1fr; padding: 28px 22px; }
+  }
+
+  /* ===== ACTIVITIES ===== */
+  .activities-intro {
+    background: linear-gradient(135deg, var(--eylf-pink-soft) 0%, #FCE9F1 100%);
+    border-radius: var(--radius-lg);
+    padding: 36px 40px;
+    margin-bottom: 36px;
+  }
+  .activities-intro h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--eylf-pink);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .activity {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 36px 40px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(30, 120, 190, 0.06);
+  }
+  .activity-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+  .activity-num {
+    width: 44px; height: 44px;
+    border-radius: 14px;
+    background: var(--eylf-pink);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-family: var(--font-display);
+    flex-shrink: 0;
+  }
+  .activity-type {
+    background: var(--eylf-purple-soft);
+    color: var(--eylf-purple);
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .activity-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--eylf-blue-deep);
+    flex: 1;
+    min-width: 240px;
+  }
+  .activity-prompt {
+    color: var(--eylf-ink);
+    margin-bottom: 18px;
+    line-height: 1.65;
+  }
+  .activity-prompt strong { color: var(--eylf-pink); }
+
+  /* Scenarios */
+  .scenario-box {
+    background: var(--eylf-blue-soft);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin: 16px 0;
+    border-left: 4px solid var(--eylf-blue);
+    font-style: italic;
+    color: var(--eylf-ink);
+  }
+  .scenario-box::before {
+    content: '✻ Scenario';
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: var(--eylf-blue-deep);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  /* Form elements */
+  .reflection-input {
+    width: 100%;
+    min-height: 100px;
+    padding: 16px 18px;
+    border: 1.5px solid rgba(30, 120, 190, 0.18);
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--eylf-ink);
+    resize: vertical;
+    background: var(--eylf-cream);
+    transition: border-color 0.2s ease;
+  }
+  .reflection-input:focus {
+    outline: none;
+    border-color: var(--eylf-blue);
+    background: white;
+  }
+
+  /* Multiple choice */
+  .choice {
+    display: block;
+    padding: 14px 20px;
+    border: 1.5px solid rgba(30, 120, 190, 0.15);
+    border-radius: var(--radius-md);
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 0.94rem;
+    transition: all 0.2s ease;
+    background: white;
+    position: relative;
+    padding-left: 48px;
+  }
+  .choice::before {
+    content: '';
+    position: absolute;
+    left: 18px; top: 50%;
+    transform: translateY(-50%);
+    width: 18px; height: 18px;
+    border: 2px solid rgba(30, 120, 190, 0.3);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+  }
+  .choice:hover { border-color: var(--eylf-blue); background: var(--eylf-blue-soft); }
+  .choice input { display: none; }
+  .choice.selected {
+    border-color: var(--eylf-blue);
+    background: var(--eylf-blue-soft);
+    font-weight: 600;
+  }
+  .choice.selected::before {
+    background: var(--eylf-blue);
+    border-color: var(--eylf-blue);
+    box-shadow: inset 0 0 0 4px white;
+  }
+  .choice.correct {
+    border-color: var(--eylf-green);
+    background: var(--eylf-green-soft);
+    color: #2F7A33;
+    font-weight: 600;
+  }
+  .choice.correct::before {
+    background: var(--eylf-green);
+    border-color: var(--eylf-green);
+    box-shadow: inset 0 0 0 4px white;
+  }
+  .choice.incorrect {
+    border-color: #d04848;
+    background: #fde8e8;
+    color: #931f1f;
+  }
+
+  /* Feedback */
+  .feedback {
+    margin-top: 16px;
+    padding: 18px 22px;
+    border-radius: var(--radius-md);
+    background: var(--eylf-green-soft);
+    border-left: 4px solid var(--eylf-green);
+    font-size: 0.94rem;
+    line-height: 1.6;
+    display: none;
+  }
+  .feedback.show { display: block; animation: fadeIn 0.3s ease; }
+  .feedback strong { color: #2F7A33; }
+
+  /* Action buttons */
+  .btn-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+  .btn {
+    padding: 12px 24px;
+    border-radius: var(--radius-pill);
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--eylf-blue) 0%, var(--eylf-blue-deep) 100%);
+    color: white;
+    box-shadow: var(--shadow-soft);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--eylf-blue-deep);
+    border: 1.5px solid rgba(30, 120, 190, 0.25);
+  }
+  .btn-ghost:hover { background: var(--eylf-blue-soft); }
+
+  /* Match game */
+  .match-zone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .match-col h5 {
+    font-family: var(--font-display);
+    color: var(--eylf-blue-deep);
+    margin-bottom: 12px;
+    font-size: 1rem;
+  }
+  .match-item {
+    background: white;
+    padding: 14px 18px;
+    border: 1.5px solid rgba(30, 120, 190, 0.12);
+    border-radius: var(--radius-md);
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  .match-item:hover { border-color: var(--eylf-blue); }
+  .match-item.active {
+    background: var(--eylf-blue-soft);
+    border-color: var(--eylf-blue);
+    font-weight: 600;
+  }
+  .match-item.matched {
+    background: var(--eylf-green-soft);
+    border-color: var(--eylf-green);
+    color: #2F7A33;
+    cursor: default;
+  }
+
+  /* ===== EYLF AT-A-GLANCE TABLE ===== */
+  .glance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .glance-col {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 28px 26px;
+    box-shadow: var(--shadow-soft);
+    border-top: 6px solid;
+  }
+  .glance-col.principles { border-top-color: var(--eylf-pink); }
+  .glance-col.practices { border-top-color: var(--eylf-purple); }
+  .glance-col.outcomes { border-top-color: var(--eylf-green); }
+  .glance-col h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .glance-col.principles h4 { color: var(--eylf-pink); }
+  .glance-col.practices h4 { color: var(--eylf-purple); }
+  .glance-col.outcomes h4 { color: var(--eylf-green); }
+  .glance-col ul {
+    list-style: none;
+  }
+  .glance-col li {
+    padding: 8px 0;
+    font-size: 0.88rem;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+    color: var(--eylf-ink);
+  }
+  .glance-col li:last-child { border-bottom: none; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    margin-top: 80px;
+    padding: 50px 0 40px;
+    background: var(--eylf-blue-deep);
+    color: rgba(255,255,255,0.85);
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  footer .brand { color: white; }
+  footer .brand-mark {
+    background: linear-gradient(135deg, white 0%, var(--eylf-pink-soft) 100%);
+    color: var(--eylf-blue-deep);
+  }
+  footer p { font-size: 0.88rem; }
+  footer a { color: var(--eylf-yellow); text-decoration: none; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 880px) {
+    .bbb-grid, .pane-grid, .glance-grid, .outcome-pillars, .match-zone {
+      grid-template-columns: 1fr;
+    }
+    .tab-content { padding: 28px 24px; }
+    .activity { padding: 28px 24px; }
+    .container { padding: 0 20px; }
+    .hero { padding: 50px 0 30px; }
+    .nav-links { display: none; }
+    .cycle-wrap { padding: 30px 20px; }
+    .outcome-header { padding: 18px 20px; gap: 14px; }
+    .outcome-title { font-size: 1.05rem; }
+    .outcome-number { width: 46px; height: 46px; font-size: 1.2rem; }
+  }
+
+  /* Print friendly */
+  @media print {
+    .top-nav, .btn-row, .nav-links { display: none; }
+    .outcome-body { max-height: none !important; }
+    .tab-pane { display: block !important; }
+    body { background: white; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="top-nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-mark">GIS</div>
+      <span>EYLF V2.0 · Teacher Reviewer</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#orientation">Orientation</a></li>
+      <li><a href="#framework">Framework</a></li>
+      <li><a href="#principles">Principles</a></li>
+      <li><a href="#practices">Practices</a></li>
+      <li><a href="#outcomes">Outcomes</a></li>
+      <li><a href="#cycle">Planning Cycle</a></li>
+      <li><a href="#activities">Activities</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-tag">
+      <span class="hero-tag-dot"></span>
+      Golden International School · Early Years & Pre-Primary (K3)
+    </div>
+    <h1>Belonging, Being &amp; <em>Becoming</em> — a teacher's working companion to the EYLF</h1>
+    <p class="hero-sub">
+      A guided, hands-on reviewer that translates Australia's Early Years Learning Framework
+      (2022, V2.0) into the rhythm of your classroom. Read, reflect, try, and document -- the
+      way a real planning week unfolds.
+    </p>
+    <div class="hero-meta">
+      <span class="meta-chip"><strong>~90 min</strong> · self-paced</span>
+      <span class="meta-chip"><strong>7</strong> guided activities</span>
+      <span class="meta-chip"><strong>Birth → 5 yrs</strong> + transition to school</span>
+      <span class="meta-chip"><strong>WA Curriculum aligned</strong></span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== TRAINER NOTE ===== -->
+<div class="container">
+  <div class="trainer-note">
+    <span class="trainer-note-label">A note from Glassroom</span>
+    <h3>How to get the most out of this reviewer</h3>
+    <p>
+      Each module pairs a short concept with a reflective prompt or scenario you'll see in your own room. Type into the text boxes -- your
+      answers stay in your browser; or save it as pdf, then please forward it to Teacher Rommel via Zoho Mail.
+    </p>
+  </div>
+</div>
+
+<!-- ===== ORIENTATION ===== -->
+<section class="section" id="orientation">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Module 01 · Orientation</div>
+      <h2 class="section-title">Three words that hold the whole framework</h2>
+      <p class="section-lead">
+        Before we look at outcomes and checklists, the EYLF asks us to see each child through a
+        three-fold lens. Read each card, then notice which one you currently lean into most — and
+        which one might need more visibility in your room.
+      </p>
+    </div>
+
+    <div class="bbb-grid">
+      <article class="bbb-card belonging">
+        <span class="glyph">B</span>
+        <h3>Belonging</h3>
+        <p>Knowing where and with whom you belong. The child is interdependent — held inside
+        family, community, place and culture. Trusting relationships are the soil.</p>
+      </article>
+      <article class="bbb-card being">
+        <span class="glyph">B</span>
+        <h3>Being</h3>
+        <p>The right to <em>be</em> a child right now — to seek, sense, play and rest. Childhood
+        is not only preparation for tomorrow; it is also a meaningful today.</p>
+      </article>
+      <article class="bbb-card becoming">
+        <span class="glyph">B</span>
+        <h3>Becoming</h3>
+        <p>The rapid change of early childhood — identities, capabilities and relationships in
+        motion. We collaborate with children and families to grow citizens, not just pupils.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FRAMEWORK AT A GLANCE ===== -->
+<section class="section" id="framework">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Module 02 · The Framework</div>
+      <h2 class="section-title">Vision · Principles · Practices · Outcomes</h2>
+      <p class="section-lead">
+        The EYLF places <strong>children's learning, development and wellbeing</strong> at the
+        centre. Around it sit four interlocking elements. Hover any column to see what it
+        contains.
+      </p>
+    </div>
+
+    <div class="glance-grid">
+      <div class="glance-col principles">
+        <h4>8 Principles</h4>
+        <ul>
+          <li>Secure, respectful &amp; reciprocal relationships</li>
+          <li>Partnerships</li>
+          <li>Respect for diversity</li>
+          <li>Aboriginal &amp; Torres Strait Islander perspectives</li>
+          <li>Equity, inclusion &amp; high expectations</li>
+          <li>Sustainability</li>
+          <li>Critical reflection &amp; ongoing professional learning</li>
+          <li>Collaborative leadership &amp; teamwork</li>
+        </ul>
+      </div>
+      <div class="glance-col practices">
+        <h4>7 Practices</h4>
+        <ul>
+          <li>Holistic, integrated &amp; interconnected approaches</li>
+          <li>Responsiveness to children</li>
+          <li>Play-based learning &amp; intentionality</li>
+          <li>Learning environments</li>
+          <li>Cultural responsiveness</li>
+          <li>Continuity of learning &amp; transitions</li>
+          <li>Assessment &amp; evaluation for learning, development &amp; wellbeing</li>
+        </ul>
+      </div>
+      <div class="glance-col outcomes">
+        <h4>5 Learning Outcomes</h4>
+        <ul>
+          <li>1 · Children have a strong sense of identity</li>
+          <li>2 · Children are connected with and contribute to their world</li>
+          <li>3 · Children have a strong sense of wellbeing</li>
+          <li>4 · Children are confident and involved learners</li>
+          <li>5 · Children are effective communicators</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== DIAGRAM 1: Elements of the EYLF — concentric circles ===== -->
+    <div class="diagram1-wrap">
+      <div class="diagram1-svg-holder">
+        <svg viewBox="-220 -220 440 440" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Elements of the EYLF Framework — concentric circle diagram"
+             style="width:100%;height:auto;overflow:visible;">
+          <defs>
+            <filter id="d1Shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#155A8F" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+          <!-- Outer ring: 5 Learning Outcomes (green) -->
+          <circle cx="0" cy="0" r="200" fill="#4FA053" filter="url(#d1Shadow)"/>
+          <!-- Practices ring (purple) -->
+          <circle cx="0" cy="0" r="160" fill="#6F4A9C"/>
+          <!-- Principles ring (pink) -->
+          <circle cx="0" cy="0" r="115" fill="#E5447B"/>
+          <!-- Vision ring (blue) -->
+          <circle cx="0" cy="0" r="70" fill="#1E78BE"/>
+
+          <!-- Labels — top arc style for outer rings, simple centred text for inner -->
+          <!-- Use a path so we can text-on-path the outer ring labels -->
+          <defs>
+            <path id="d1RingOutcomes" d="M -180 0 A 180 180 0 0 1 180 0" fill="none"/>
+            <path id="d1RingPractices" d="M -137 0 A 137 137 0 0 1 137 0" fill="none"/>
+            <path id="d1RingPrinciples" d="M -92 0 A 92 92 0 0 1 92 0" fill="none"/>
+          </defs>
+
+          <g font-family="Plus Jakarta Sans" font-weight="700" fill="white" text-anchor="middle">
+            <text font-size="14" letter-spacing="2">
+              <textPath href="#d1RingOutcomes" startOffset="50%">5 LEARNING OUTCOMES</textPath>
+            </text>
+            <text font-size="13" letter-spacing="2">
+              <textPath href="#d1RingPractices" startOffset="50%">7 PRACTICES</textPath>
+            </text>
+            <text font-size="12" letter-spacing="2">
+              <textPath href="#d1RingPrinciples" startOffset="50%">8 PRINCIPLES</textPath>
+            </text>
+            <!-- Centre vision -->
+            <text x="0" y="-4" font-size="13" letter-spacing="1.5">VISION</text>
+            <text x="0" y="14" font-size="10" opacity="0.85" font-weight="500">for children's</text>
+            <text x="0" y="28" font-size="10" opacity="0.85" font-weight="500">learning</text>
+          </g>
+        </svg>
+      </div>
+      <div class="diagram1-legend">
+        <h4>Elements of the EYLF</h4>
+        <p>The framework places children's learning, development and wellbeing at the centre. Each ring around it informs the next — and all four elements are interconnected.</p>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#1E78BE;"></span>
+          <div><strong>Vision</strong><p>All children experience learning that is engaging and builds success for life.</p></div>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#E5447B;"></span>
+          <div><strong>Principles</strong> · the <em>why</em><p>Ethical, inclusive and socially-just beliefs about children's learning.</p></div>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#6F4A9C;"></span>
+          <div><strong>Practices</strong> · the <em>how</em><p>The pedagogical moves educators make, day in and day out.</p></div>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#4FA053;"></span>
+          <div><strong>Learning Outcomes</strong> · the <em>what</em><p>Broad observable goals that children progress towards over the early years.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRINCIPLES MODULE WITH TABS ===== -->
+<section class="section" id="principles">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Module 03 · Principles</div>
+      <h2 class="section-title">The 8 Principles, explained for a working classroom</h2>
+      <p class="section-lead">
+        Principles are the "why" behind what we do. Tap through each one. Then in the activity
+        section, you'll match a real classroom moment to the principle it draws on.
+      </p>
+    </div>
+
+    <div class="module-card">
+      <div class="tab-bar" id="principleTabs">
+        <button class="tab-btn active" data-tab="p1">Relationships</button>
+        <button class="tab-btn" data-tab="p2">Partnerships</button>
+        <button class="tab-btn" data-tab="p3">Diversity</button>
+        <button class="tab-btn" data-tab="p4">ATSI Perspectives</button>
+        <button class="tab-btn" data-tab="p5">Equity</button>
+        <button class="tab-btn" data-tab="p6">Sustainability</button>
+        <button class="tab-btn" data-tab="p7">Critical Reflection</button>
+        <button class="tab-btn" data-tab="p8">Leadership</button>
+      </div>
+
+      <div class="tab-content">
+        <div class="tab-pane active" data-pane="p1">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-pink);margin-bottom:10px;">Secure, Respectful and Reciprocal Relationships</h3>
+          <p>Children's first attachments — and a widening network of trusted educators — are the secure base from which they explore. Healthy brain development is shaped by warm, attuned interactions, predictable routines, and the small rituals that say <em>"you belong here, you are seen."</em></p>
+          <div class="pane-grid">
+            <div class="item-pill pink"><h4>In practice</h4><p>Greet each child by name in their preferred language. Pause for unhurried morning hand-offs. Hold a consistent key-educator for under-3s.</p></div>
+            <div class="item-pill pink"><h4>You'll know it's working when…</h4><p>A child seeks you out for comfort <em>and</em> for shared discoveries. They venture further, knowing they can return.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="p2">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-pink);margin-bottom:10px;">Partnerships</h3>
+          <p>Families are the child's first and most influential teachers. Genuine partnership means valuing what families know, sharing decisions, communicating safely, and acting with empathy when families are experiencing adversity.</p>
+          <div class="pane-grid">
+            <div class="item-pill pink"><h4>In practice</h4><p>Two-way "all about me" forms at enrolment. Translate key messages. Invite family contributions to curriculum, not just to events.</p></div>
+            <div class="item-pill pink"><h4>Watch for</h4><p>One-way newsletters dressed up as "partnership." True partnership invites response and shifts the plan.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="p3">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-pink);margin-bottom:10px;">Respect for Diversity</h3>
+          <p>Every child arrives with a family culture, language, heritage and lifestyle that belongs in the curriculum — not as decoration on a wall, but as living material for play and learning.</p>
+          <div class="pane-grid">
+            <div class="item-pill pink"><h4>In practice</h4><p>Audit your books and dolls: do they reflect every child in the room? Invite families to share a song, a recipe, a celebration.</p></div>
+            <div class="item-pill pink"><h4>Avoid</h4><p>Tokenism — a single "culture week." Embed diversity in everyday routines, language and resources.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="p4">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-pink);margin-bottom:10px;">Aboriginal &amp; Torres Strait Islander Perspectives</h3>
+          <p>Embedding First Nations perspectives is a shared responsibility for <em>all</em> services — regardless of whether ATSI children are enrolled. It honours 60,000+ years of knowledge and advances Reconciliation.</p>
+          <div class="pane-grid">
+            <div class="item-pill pink"><h4>In practice</h4><p>Acknowledgement of Country in your own words. Use local Aboriginal names for seasons, places, animals. Engage local Elders respectfully.</p></div>
+            <div class="item-pill pink"><h4>Deeper move</h4><p>Build an "intercultural space" — where Western and Aboriginal ways of knowing sit side-by-side, not one inside the other.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="p5">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-pink);margin-bottom:10px;">Equity, Inclusion &amp; High Expectations</h3>
+          <p>Equitable means <em>fair, not equal</em>. Some children need more — more time, more scaffolding, more reasonable adjustments — to access the same learning. High expectations apply to <em>every</em> child.</p>
+          <div class="pane-grid">
+            <div class="item-pill pink"><h4>In practice</h4><p>Make reasonable adjustments under the Disability Standards. Plan multiple entry points to the same experience.</p></div>
+            <div class="item-pill pink"><h4>Mindset shift</h4><p>From "What's wrong with this child?" to "What barriers in my environment can I remove?"</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="p6">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-pink);margin-bottom:10px;">Sustainability</h3>
+          <p>EYLF V2.0 broadens sustainability across three dimensions: <strong>environmental, social and economic</strong>. Children are powerful advocates for change.</p>
+          <div class="pane-grid">
+            <div class="item-pill pink"><h4>In practice</h4><p>The 7Rs — reduce, reuse, recycle, respect, repair, reflect, refuse. Compost. Worm farm. Living gardens.</p></div>
+            <div class="item-pill pink"><h4>Beyond nature</h4><p>Sustainability is also fairness, sharing, citizenship. Talk about who gets what, and why.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="p7">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-pink);margin-bottom:10px;">Critical Reflection &amp; Ongoing Professional Learning</h3>
+          <p>Reflection asks "what happened?"; critical reflection asks "<em>who benefited? who was silenced? what would I do differently and why?</em>" — drawing on theory, ethics and diverse perspectives.</p>
+          <div class="pane-grid">
+            <div class="item-pill pink"><h4>Try these prompts</h4><p>Who is advantaged when I plan this way? Who is excluded? What theory am I leaning on without naming?</p></div>
+            <div class="item-pill pink"><h4>Make it routine</h4><p>10 minutes at the end of every Friday with a colleague. One observation, three perspectives.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="p8">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-pink);margin-bottom:10px;">Collaborative Leadership &amp; Teamwork</h3>
+          <p>Every educator leads — through their ethical practice with children and through respectful, professional conversations with colleagues. Children sense the work culture of the room.</p>
+          <div class="pane-grid">
+            <div class="item-pill pink"><h4>In practice</h4><p>Peer mentoring. Share new learning at team meetings. Contribute to the Quality Improvement Plan.</p></div>
+            <div class="item-pill pink"><h4>Tone</h4><p>Curiosity over judgement. "Help me see what you saw" beats "you should have…"</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRACTICES MODULE WITH TABS ===== -->
+<section class="section" id="practices">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Module 04 · Practices</div>
+      <h2 class="section-title">The 7 Practices — Principles, in motion</h2>
+      <p class="section-lead">
+        If Principles answer <em>why</em>, Practices answer <em>how</em>. These are the moves
+        you'll be observed making, and the moves we'll plan together.
+      </p>
+    </div>
+
+    <div class="module-card">
+      <div class="tab-bar" id="practiceTabs">
+        <button class="tab-btn active" data-tab="x1">Holistic Approaches</button>
+        <button class="tab-btn" data-tab="x2">Responsiveness</button>
+        <button class="tab-btn" data-tab="x3">Play &amp; Intentionality</button>
+        <button class="tab-btn" data-tab="x4">Learning Environments</button>
+        <button class="tab-btn" data-tab="x5">Cultural Responsiveness</button>
+        <button class="tab-btn" data-tab="x6">Continuity &amp; Transitions</button>
+        <button class="tab-btn" data-tab="x7">Assessment &amp; Evaluation</button>
+      </div>
+
+      <div class="tab-content">
+        <div class="tab-pane active" data-pane="x1">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-purple);margin-bottom:10px;">Holistic, Integrated &amp; Interconnected Approaches</h3>
+          <p>Children's learning is woven — physical, cognitive, social, emotional, spiritual and creative threads, all at once. Plan and observe with the whole child in view, not just the "literacy slot."</p>
+          <div class="pane-grid">
+            <div class="item-pill purple"><h4>Try this</h4><p>Pick one play episode this week. Map which Outcomes it touched — you'll be surprised how many.</p></div>
+            <div class="item-pill purple"><h4>Don't</h4><p>Don't reduce a child to a checklist. The list serves the child, not the other way around.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="x2">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-purple);margin-bottom:10px;">Responsiveness to Children</h3>
+          <p>Notice the strengths, languages and "funds of knowledge" each child carries from home. Use open questions, follow-up prompts and "teachable moments" — planned <em>and</em> spontaneous.</p>
+          <div class="pane-grid">
+            <div class="item-pill purple"><h4>Micro-moves</h4><p>"Tell me more." "What if we…?" Pause. Wait 5 full seconds before adding your idea.</p></div>
+            <div class="item-pill purple"><h4>Bigger move</h4><p>Adjust tomorrow's plan based on what you noticed today. That is responsiveness.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="x3">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-purple);margin-bottom:10px;">Play-Based Learning &amp; Intentionality</h3>
+          <p>Play is the <em>context</em> and the <em>process</em>. Educators are intentional — choosing when to observe, when to enter the play, when to model, question, scaffold, or step back.</p>
+          <div class="pane-grid">
+            <div class="item-pill purple"><h4>Balance</h4><p>Mix child-led, adult-initiated and adult-guided experiences across each day. Document the balance.</p></div>
+            <div class="item-pill purple"><h4>Intentional teaching</h4><p>Modelling, demonstrating, asking open questions, sustained shared thinking, naming concepts.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="x4">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-purple);margin-bottom:10px;">Learning Environments</h3>
+          <p>Physical, temporal, social and intellectual — all four. Outdoor and indoor. Active and calm. Reflective of every child's culture. Accessible for every body.</p>
+          <div class="pane-grid">
+            <div class="item-pill purple"><h4>Audit prompt</h4><p>Stand at the door at child-height. What invites you in? What signals belonging? What signals exclusion?</p></div>
+            <div class="item-pill purple"><h4>Outdoors</h4><p>Loose parts, real risk, sustained time. Outdoors is not a break from learning — it <em>is</em> learning.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="x5">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-purple);margin-bottom:10px;">Cultural Responsiveness</h3>
+          <p>More than awareness — a three-way ongoing process between educator, child and family. Honours diverse ways of communicating, includes ATSI perspectives, and acts against discrimination.</p>
+          <div class="pane-grid">
+            <div class="item-pill purple"><h4>Start with self</h4><p>Name your own cultural assumptions. The shoes you stand in shape the floor you see.</p></div>
+            <div class="item-pill purple"><h4>Make it visible</h4><p>Home languages on labels. Family photos at child height. Music from every family represented.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="x6">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-purple);margin-bottom:10px;">Continuity of Learning &amp; Transitions</h3>
+          <p>Transitions are big (home → kindy, kindy → Pre-Primary) and small (snack → group time). Both need rituals, predictability and shared information across settings.</p>
+          <div class="pane-grid">
+            <div class="item-pill purple"><h4>Hand-overs</h4><p>Share a child's strengths, languages and interests with the Pre-Primary teacher — not just their "areas of concern."</p></div>
+            <div class="item-pill purple"><h4>Daily rituals</h4><p>Same tidy-up song. Same goodbye gesture. Small certainties hold big feelings.</p></div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="x7">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--eylf-purple);margin-bottom:10px;">Assessment &amp; Evaluation for Learning, Development and Wellbeing</h3>
+          <p>Three lenses: assessment <em>for</em> learning (formative — informs next steps), <em>of</em> learning (summative — shows distance travelled), and <em>as</em> learning (the child reflects on their own learning).</p>
+          <div class="pane-grid">
+            <div class="item-pill purple"><h4>Methods</h4><p>Learning stories, jottings, photos, work samples, child voice quotes, family input, floorbooks.</p></div>
+            <div class="item-pill purple"><h4>Evaluate too</h4><p>Don't only assess the child — evaluate <em>your plan</em>. Did it work? For whom? What's next?</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEARNING OUTCOMES ACCORDION ===== -->
+<section class="section" id="outcomes">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Module 05 · Learning Outcomes</div>
+      <h2 class="section-title">The 5 Learning Outcomes — what we look for, what we plan for</h2>
+      <p class="section-lead">
+        Each outcome is broad and observable. They are <em>not</em> a checklist of milestones —
+        they are lenses for noticing the integrated learning already happening in your room.
+        Click any outcome to expand it.
+      </p>
+    </div>
+
+    <div class="outcomes-stack" id="outcomesStack">
+
+      <!-- Outcome 1 -->
+      <div class="outcome-card">
+        <button class="outcome-header" type="button">
+          <span class="outcome-number">1</span>
+          <span class="outcome-title">Children have a strong sense of identity</span>
+          <span class="outcome-toggle">+</span>
+        </button>
+        <div class="outcome-body">
+          <div class="outcome-content">
+            <p style="color:var(--eylf-ink-soft);margin-bottom:8px;">Identity is the cornerstone. It is built through trusting relationships, agency, and feeling recognised. Identity is not fixed — it changes across settings.</p>
+            <div class="outcome-pillars">
+              <div class="pillar-block">
+                <h5>Children feel…</h5>
+                <ul>
+                  <li>Safe, secure and supported</li>
+                  <li>Emerging autonomy, resilience and agency</li>
+                  <li>Knowledgeable, confident self-identities</li>
+                  <li>Able to interact with care, empathy &amp; respect</li>
+                </ul>
+              </div>
+              <div class="pillar-block">
+                <h5>Educators…</h5>
+                <ul>
+                  <li>Acknowledge cues, signals and home languages</li>
+                  <li>Build culturally safe places to share story &amp; culture</li>
+                  <li>Hold high expectations of every child</li>
+                  <li>Mediate and name feelings, model empathy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome 2 -->
+      <div class="outcome-card">
+        <button class="outcome-header" type="button">
+          <span class="outcome-number">2</span>
+          <span class="outcome-title">Children are connected with and contribute to their world</span>
+          <span class="outcome-toggle">+</span>
+        </button>
+        <div class="outcome-body">
+          <div class="outcome-content">
+            <p style="color:var(--eylf-ink-soft);margin-bottom:8px;">From family to community to the digital and natural world — children grow as active, informed citizens with reciprocal rights and responsibilities.</p>
+            <div class="outcome-pillars">
+              <div class="pillar-block">
+                <h5>Children develop…</h5>
+                <ul>
+                  <li>Sense of connectedness &amp; citizenship</li>
+                  <li>Response to diversity with respect</li>
+                  <li>Awareness of fairness</li>
+                  <li>Social responsibility &amp; respect for the environment</li>
+                </ul>
+              </div>
+              <div class="pillar-block">
+                <h5>Educators…</h5>
+                <ul>
+                  <li>Connect setting to local community</li>
+                  <li>Embed the 7Rs of sustainability</li>
+                  <li>Model anti-bias responses to unfairness</li>
+                  <li>Build authentic ATSI community partnerships</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome 3 -->
+      <div class="outcome-card">
+        <button class="outcome-header" type="button">
+          <span class="outcome-number">3</span>
+          <span class="outcome-title">Children have a strong sense of wellbeing</span>
+          <span class="outcome-toggle">+</span>
+        </button>
+        <div class="outcome-body">
+          <div class="outcome-content">
+            <p style="color:var(--eylf-ink-soft);margin-bottom:8px;">Wellbeing is physical <em>and</em> psychological — resilience, self-regulation, healthy bodies, healthy minds, and the right to feel happy and safe.</p>
+            <div class="outcome-pillars">
+              <div class="pillar-block">
+                <h5>Children become strong in…</h5>
+                <ul>
+                  <li>Social, emotional &amp; mental wellbeing</li>
+                  <li>Physical learning and wellbeing</li>
+                  <li>Strategies for their own health &amp; safety</li>
+                  <li>Body autonomy &amp; consent</li>
+                </ul>
+              </div>
+              <div class="pillar-block">
+                <h5>Educators…</h5>
+                <ul>
+                  <li>Adopt trauma-informed practice</li>
+                  <li>Teach body safety in age-appropriate ways</li>
+                  <li>Plan for risky play with reasonable challenge</li>
+                  <li>Model self-regulation language &amp; strategies</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome 4 -->
+      <div class="outcome-card">
+        <button class="outcome-header" type="button">
+          <span class="outcome-number">4</span>
+          <span class="outcome-title">Children are confident and involved learners</span>
+          <span class="outcome-toggle">+</span>
+        </button>
+        <div class="outcome-body">
+          <div class="outcome-content">
+            <p style="color:var(--eylf-ink-soft);margin-bottom:8px;">A growth mindset, persistence, problem-solving and the ability to transfer learning from one context to another — built on curiosity and hands-on investigation.</p>
+            <div class="outcome-pillars">
+              <div class="pillar-block">
+                <h5>Children develop…</h5>
+                <ul>
+                  <li>Curiosity, persistence, creativity, reflexivity</li>
+                  <li>Problem solving, inquiry, hypothesising</li>
+                  <li>Ability to transfer &amp; adapt learning</li>
+                  <li>Resourcing learning through people &amp; materials</li>
+                </ul>
+              </div>
+              <div class="pillar-block">
+                <h5>Educators…</h5>
+                <ul>
+                  <li>Praise effort &amp; process over outcome</li>
+                  <li>Model wonder &amp; "I don't know yet — let's find out"</li>
+                  <li>Scaffold with open-ended questions</li>
+                  <li>Make learning visible &amp; revisitable</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome 5 -->
+      <div class="outcome-card">
+        <button class="outcome-header" type="button">
+          <span class="outcome-number">5</span>
+          <span class="outcome-title">Children are effective communicators</span>
+          <span class="outcome-toggle">+</span>
+        </button>
+        <div class="outcome-body">
+          <div class="outcome-content">
+            <p style="color:var(--eylf-ink-soft);margin-bottom:8px;">Communication is far more than spoken English — it's gesture, art, music, dance, digital media, signs, symbols, home languages and emerging literacy and numeracy.</p>
+            <div class="outcome-pillars">
+              <div class="pillar-block">
+                <h5>Children…</h5>
+                <ul>
+                  <li>Interact verbally and non-verbally for many purposes</li>
+                  <li>Engage with and gain meaning from a range of texts</li>
+                  <li>Express ideas through diverse media</li>
+                  <li>Begin to understand symbols &amp; pattern systems</li>
+                  <li>Use digital technologies safely &amp; creatively</li>
+                </ul>
+              </div>
+              <div class="pillar-block">
+                <h5>Educators…</h5>
+                <ul>
+                  <li>Value and use home languages alongside English</li>
+                  <li>Read widely, sing, rhyme, tell stories every day</li>
+                  <li>Provide rich mathematical vocabulary &amp; play</li>
+                  <li>Model safe, purposeful use of digital tools</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLANNING CYCLE ===== -->
+<section class="section" id="cycle">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Module 06 · Planning Cycle</div>
+      <h2 class="section-title">The 5-step planning cycle (with documentation woven through)</h2>
+      <p class="section-lead">
+        Click each segment of the wheel to see what it asks of you in your day. Documentation
+        sits at the centre — it happens at <em>every</em> stage, not just the end.
+      </p>
+    </div>
+
+    <div class="cycle-wrap">
+      <div class="cycle-container">
+        <svg viewBox="-220 -220 440 440" class="cycle-svg" id="cycleSvg"
+             role="img" aria-label="EYLF V2.0 Planning Cycle">
+          <!--
+            Donut maths: 5 equal segments, each 72°.
+            Outer radius 180, inner radius 100.
+            Starting at -90° (top) and going clockwise.
+            Each segment occupies [start, start+72°].
+            For each: outer arc start P1, outer end P2, inner end P3, inner start P4.
+          -->
+          <defs>
+            <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#155A8F" flood-opacity="0.18"/>
+            </filter>
+          </defs>
+
+          <g id="cycleSegments" filter="url(#softShadow)">
+            <!-- Generated at runtime -->
+          </g>
+
+          <!-- Centre circle (documentation hub) -->
+          <circle cx="0" cy="0" r="88" fill="#FFFDF9" stroke="#155A8F" stroke-width="2" stroke-dasharray="3 4" opacity="0.9"/>
+
+          <!-- Labels generated at runtime to ensure correct positioning -->
+          <g id="cycleLabels" font-family="Plus Jakarta Sans" font-weight="700" fill="white" text-anchor="middle" pointer-events="none"></g>
+
+          <!-- Connecting flow arrows between segments -->
+          <g id="cycleArrows" fill="white" opacity="0.85" pointer-events="none"></g>
+        </svg>
+        <div class="cycle-center">
+          <h4>Documentation</h4>
+          <p>woven through every stage</p>
+        </div>
+      </div>
+
+      <div class="cycle-detail" id="cycleDetail">
+        <h5 style="color:var(--eylf-pink);">Tap a segment of the wheel above</h5>
+        <p style="color:var(--eylf-ink-soft);">Each step has its own purpose in the cycle. The cycle can happen "in the moment" in a single play episode, or unfold across weeks of long-term planning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACTIVITIES ===== -->
+<section class="section" id="activities">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Module 07 · Activities</div>
+      <h2 class="section-title">Now you try — 7 hands-on tasks for the teacher</h2>
+      <p class="section-lead">
+        These are designed for <em>you</em>, not for your children. Type into the boxes — your
+        answers are saved locally in your browser only. When you're done, save the page (or
+        print to PDF) and bring it to Friday's faculty huddle.
+      </p>
+    </div>
+
+    <div class="activities-intro">
+      <h3>How the activities work</h3>
+      <p>You'll meet five formats: <strong>matching</strong>, <strong>multiple choice</strong>,
+        <strong>scenario reflection</strong>, <strong>planning</strong>, and a final
+        <strong>self-audit</strong>. Each one has an answer reveal so you can check yourself.</p>
+    </div>
+
+    <!-- ACTIVITY 1: MATCH PRINCIPLES -->
+    <div class="activity" id="activity1">
+      <div class="activity-head">
+        <span class="activity-num">1</span>
+        <span class="activity-type">Match</span>
+        <span class="activity-title">Match the classroom moment to its Principle</span>
+      </div>
+      <p class="activity-prompt">Tap a moment on the left, then tap the Principle on the right that it most strongly draws on. Some moments touch several principles — pick the <strong>strongest</strong>.</p>
+
+      <div class="match-zone">
+        <div class="match-col">
+          <h5>Classroom moments</h5>
+          <div class="match-item" data-side="left" data-id="a">Inviting Aanya's grandmother in to teach the class a Diwali song in Hindi.</div>
+          <div class="match-item" data-side="left" data-id="b">Pausing every Friday for ten minutes with a colleague to ask "who was excluded by this week's plan?"</div>
+          <div class="match-item" data-side="left" data-id="c">Setting up a worm farm with the children, then weighing classroom food waste each week.</div>
+          <div class="match-item" data-side="left" data-id="d">Holding a familiar key-educator for under-3s and protecting unhurried morning hand-offs.</div>
+        </div>
+        <div class="match-col">
+          <h5>Principles</h5>
+          <div class="match-item" data-side="right" data-id="d">Secure, respectful &amp; reciprocal relationships</div>
+          <div class="match-item" data-side="right" data-id="a">Respect for diversity</div>
+          <div class="match-item" data-side="right" data-id="c">Sustainability</div>
+          <div class="match-item" data-side="right" data-id="b">Critical reflection &amp; ongoing professional learning</div>
+        </div>
+      </div>
+      <div class="feedback" id="fb1"><strong>Nice work!</strong> All matched. Notice how each moment also <em>touches</em> other principles — partnerships sit inside the Diwali invitation, equity sits inside the reflection time. Principles rarely act alone.</div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="resetMatch()">Reset</button>
+      </div>
+    </div>
+
+    <!-- ACTIVITY 2: MCQ -->
+    <div class="activity" id="activity2">
+      <div class="activity-head">
+        <span class="activity-num">2</span>
+        <span class="activity-type">Multiple choice</span>
+        <span class="activity-title">Choose the most EYLF-aligned response</span>
+      </div>
+      <div class="scenario-box">
+        Four-year-old Liam is upset at drop-off every morning this week. He clings to his father, cries, and won't engage with the play set-up until 30 minutes after his dad leaves. Which response best reflects EYLF Principle 1 (Secure, respectful and reciprocal relationships) and Practice 6 (Continuity and transitions)?
+      </div>
+      <div id="mcq2">
+        <label class="choice" data-correct="false"><input type="radio" name="q2"/> Tell Liam he's a big boy now and that crying won't help. Move him quickly to a play activity to "distract" him.</label>
+        <label class="choice" data-correct="false"><input type="radio" name="q2"/> Ask Liam's father to leave faster each morning to "rip the bandaid off." Suggest no goodbyes.</label>
+        <label class="choice" data-correct="true"><input type="radio" name="q2"/> Co-design a goodbye ritual with Liam and his father — a special wave at the window, a transition object from home, and a consistent key-educator to greet him. Document and review with the family after one week.</label>
+        <label class="choice" data-correct="false"><input type="radio" name="q2"/> Wait it out. He'll settle eventually. Avoid making it a "thing."</label>
+      </div>
+      <div class="feedback" id="fb2"></div>
+    </div>
+
+    <!-- ACTIVITY 3: MCQ -->
+    <div class="activity" id="activity3">
+      <div class="activity-head">
+        <span class="activity-num">3</span>
+        <span class="activity-type">Multiple choice</span>
+        <span class="activity-title">Identify the Outcome at work</span>
+      </div>
+      <div class="scenario-box">
+        During outdoor play, Mei and Joshua argue over a single bucket of water. Joshua suggests they "share by taking turns counting to ten." Mei agrees, but then offers a better idea: "Or we get another bucket so we both have one!" They run together to find a second bucket. Which Learning Outcome is most strongly evidenced here?
+      </div>
+      <div id="mcq3">
+        <label class="choice" data-correct="false"><input type="radio" name="q3"/> Outcome 1 — Strong sense of identity</label>
+        <label class="choice" data-correct="true"><input type="radio" name="q3"/> Outcome 2 — Connected with and contribute to their world (fairness, problem-solving with others)</label>
+        <label class="choice" data-correct="false"><input type="radio" name="q3"/> Outcome 3 — Strong sense of wellbeing</label>
+        <label class="choice" data-correct="false"><input type="radio" name="q3"/> Outcome 5 — Effective communicators</label>
+      </div>
+      <div class="feedback" id="fb3"></div>
+    </div>
+
+    <!-- ACTIVITY 4: SCENARIO REFLECTION -->
+    <div class="activity" id="activity4">
+      <div class="activity-head">
+        <span class="activity-num">4</span>
+        <span class="activity-type">Scenario reflection</span>
+        <span class="activity-title">Embedding ATSI perspectives — your first move</span>
+      </div>
+      <div class="scenario-box">
+        Your Pre-Primary room currently has no Aboriginal or Torres Strait Islander children enrolled. A colleague says, "We don't really need to focus on ATSI perspectives this term — it's not relevant to our group." How do you respectfully respond, and what is one concrete first step you can take in your room next week?
+      </div>
+      <p style="margin-bottom:10px;color:var(--eylf-ink-soft);"><strong>Write your answer below:</strong></p>
+      <textarea class="reflection-input" id="r4" data-save="r4" placeholder="Your response: how do you reframe this for your colleague, and what is one concrete action you'll take next week?"></textarea>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="saveAnswer('r4', 4)">Save my answer</button>
+        <button class="btn btn-ghost" onclick="revealAnswer(4)">Show a sample response</button>
+      </div>
+      <div class="feedback" id="fb4">
+        <strong>Sample response:</strong> "The EYLF is explicit that embedding ATSI perspectives is a <em>shared responsibility for all settings</em>, regardless of enrolment. It's how we fulfil every child's right to know Australia's First Nations histories and advance Reconciliation.
+        <br><br>One concrete first step: at our next planning meeting, propose adopting a respectful, locally-grounded Acknowledgement of Country (we'll learn the local Whadjuk Noongar place names), and add three picture books by First Nations authors to our reading corner — for example, <em>Welcome to Country</em> by Aunty Joy Murphy, <em>Somebody's Land</em> by Adam Goodes, and <em>Respect</em> by Aunty Fay Muir. From there we can build slowly toward seasonal names, Country yarns, and (when we're ready) inviting a local Elder."
+      </div>
+    </div>
+
+    <!-- ACTIVITY 5: PLANNING -->
+    <div class="activity" id="activity5">
+      <div class="activity-head">
+        <span class="activity-num">5</span>
+        <span class="activity-type">Planning task</span>
+        <span class="activity-title">Run one play episode through the planning cycle</span>
+      </div>
+      <p class="activity-prompt">Pick one real play episode from your room this week. Write a short note for each stage of the cycle. There are no wrong answers — this is your draft.</p>
+
+      <p style="margin: 16px 0 8px;font-weight:600;color:var(--eylf-blue-deep);">① OBSERVE — what did you notice?</p>
+      <textarea class="reflection-input" data-save="cycle_observe" placeholder="Who was involved? What did they do, say, choose? What surprised you?"></textarea>
+
+      <p style="margin: 16px 0 8px;font-weight:600;color:var(--eylf-blue-deep);">② ANALYSE LEARNING — what learning is happening, against which Outcome(s)?</p>
+      <textarea class="reflection-input" data-save="cycle_analyse" placeholder="Link to 1–2 Learning Outcomes. What dispositions, skills, knowledge are you seeing? Interpret using theory and family/colleague input."></textarea>
+
+      <p style="margin: 16px 0 8px;font-weight:600;color:var(--eylf-blue-deep);">③ PLAN — what's a next step that extends this?</p>
+      <textarea class="reflection-input" data-save="cycle_plan" placeholder="One specific extension. Materials, prompt, environment change, or follow-up question."></textarea>
+
+      <p style="margin: 16px 0 8px;font-weight:600;color:var(--eylf-blue-deep);">④ IMPLEMENT — how will you enact it tomorrow?</p>
+      <textarea class="reflection-input" data-save="cycle_implement" placeholder="When, where, who, with what intentional teaching moves?"></textarea>
+
+      <p style="margin: 16px 0 8px;font-weight:600;color:var(--eylf-blue-deep);">⑤ REFLECT / EVALUATE — how will you know it worked, and what will you do differently?</p>
+      <textarea class="reflection-input" data-save="cycle_reflect" placeholder="What evidence would tell you the plan deepened the children's learning? What if it didn't? What will you change next loop?"></textarea>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="saveCycle()">Save my planning draft</button>
+      </div>
+      <div class="feedback" id="fb5"></div>
+    </div>
+
+    <!-- ACTIVITY 6: MCQ -->
+    <div class="activity" id="activity6">
+      <div class="activity-head">
+        <span class="activity-num">6</span>
+        <span class="activity-type">Multiple choice</span>
+        <span class="activity-title">Assessment — for, of, or as learning?</span>
+      </div>
+      <div class="scenario-box">
+        At the end of a week-long mini-project on "where our food comes from," you sit with the children at the floorbook and ask: "What did you learn? What surprised you? What do you still wonder about?" The children dictate, draw, and you scribe their reflections.
+        <br><br>What <em>kind</em> of assessment is this?
+      </div>
+      <div id="mcq6">
+        <label class="choice" data-correct="false"><input type="radio" name="q6"/> Assessment <em>for</em> learning (formative)</label>
+        <label class="choice" data-correct="false"><input type="radio" name="q6"/> Assessment <em>of</em> learning (summative)</label>
+        <label class="choice" data-correct="true"><input type="radio" name="q6"/> Assessment <em>as</em> learning</label>
+        <label class="choice" data-correct="false"><input type="radio" name="q6"/> Diagnostic assessment</label>
+      </div>
+      <div class="feedback" id="fb6"></div>
+    </div>
+
+    <!-- ACTIVITY 7: SELF-AUDIT -->
+    <div class="activity" id="activity7">
+      <div class="activity-head">
+        <span class="activity-num">7</span>
+        <span class="activity-type">Self-audit</span>
+        <span class="activity-title">My room, my practice — an honest stocktake</span>
+      </div>
+      <p class="activity-prompt">For each prompt, write the <strong>one specific change</strong> you could realistically make in the next two weeks. Be concrete. ("Add a basket of mirrors at the family corner" beats "be more inclusive.")</p>
+
+      <p style="margin: 16px 0 8px;font-weight:600;color:var(--eylf-blue-deep);">A · Belonging — One change that will help a child who is struggling to feel seen.</p>
+      <textarea class="reflection-input" data-save="audit_a" placeholder="One specific, doable change…"></textarea>
+
+      <p style="margin: 16px 0 8px;font-weight:600;color:var(--eylf-blue-deep);">B · Being — One way I'll protect unhurried play this week, even when the day feels rushed.</p>
+      <textarea class="reflection-input" data-save="audit_b" placeholder="One specific, doable change…"></textarea>
+
+      <p style="margin: 16px 0 8px;font-weight:600;color:var(--eylf-blue-deep);">C · Becoming — One challenge I'll offer that I would have shied away from before this reviewer.</p>
+      <textarea class="reflection-input" data-save="audit_c" placeholder="One specific, doable change…"></textarea>
+
+      <p style="margin: 16px 0 8px;font-weight:600;color:var(--eylf-blue-deep);">D · Partnerships — One question I'll ask a family this week that I haven't asked before.</p>
+      <textarea class="reflection-input" data-save="audit_d" placeholder="One specific, doable change…"></textarea>
+
+      <p style="margin: 16px 0 8px;font-weight:600;color:var(--eylf-blue-deep);">E · Reflection — One assumption I made today that I want to question on Friday.</p>
+      <textarea class="reflection-input" data-save="audit_e" placeholder="One specific, doable change…"></textarea>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="saveAudit()">Save my audit</button>
+        <button class="btn btn-ghost" onclick="window.print()">Print / save as PDF</button>
+      </div>
+      <div class="feedback" id="fb7"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="brand">
+      <div class="brand-mark">GIS</div>
+      <span>Golden International School · Early Years Faculty</span>
+    </div>
+    <p>
+      Built around Belonging, Being &amp; Becoming: The EYLF for Australia (V2.0, 2022).
+      <br>For internal teacher training use, aligned with the Western Australian Curriculum.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // ===== TABS (Principles & Practices share logic) =====
+  function wireTabs(containerId) {
+    const bar = document.getElementById(containerId);
+    if (!bar) return;
+    const tabModule = bar.closest('.module-card');
+    bar.addEventListener('click', (e) => {
+      const btn = e.target.closest('.tab-btn');
+      if (!btn) return;
+      const tab = btn.dataset.tab;
+      bar.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+      tabModule.querySelectorAll('.tab-pane').forEach(p => p.classList.toggle('active', p.dataset.pane === tab));
+    });
+  }
+  wireTabs('principleTabs');
+  wireTabs('practiceTabs');
+
+  // ===== OUTCOMES ACCORDION =====
+  document.querySelectorAll('#outcomesStack .outcome-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const card = header.closest('.outcome-card');
+      const wasOpen = card.classList.contains('open');
+      document.querySelectorAll('#outcomesStack .outcome-card').forEach(c => c.classList.remove('open'));
+      if (!wasOpen) card.classList.add('open');
+    });
+  });
+  // Open first outcome by default
+  document.querySelector('#outcomesStack .outcome-card')?.classList.add('open');
+
+  // ===== PLANNING CYCLE — EYLF V2.0 names =====
+  const cycleSteps = [
+    {
+      key: 'observe',
+      label: 'OBSERVE',
+      colour: '#E5447B',
+      title: 'Observe · Listen · Collect Information',
+      body: 'Use multiple sources — across routines, planned and unplanned moments, peer interactions and family input. Be attuned to dispositions, curiosity, theories and contributions to others\' learning. Children\'s and families\' voices are sought, heard and included.'
+    },
+    {
+      key: 'analyse',
+      label: 'ANALYSE',
+      colour: '#E88A3E',
+      title: 'Analyse Learning',
+      body: 'Interpret what you have observed. Draw on your professional knowledge, early childhood theory, and the expertise of children, families and colleagues. Identify strengths and capacities — in the moment and over time — and link to the Learning Outcomes. Includes very young children\'s embodied learning.'
+    },
+    {
+      key: 'plan',
+      label: 'PLAN',
+      colour: '#F2C94C',
+      title: 'Plan',
+      body: 'Inspired by your analysis. Choose teaching strategies, content, resources, time and environments with intentionality. Place relational and place-based pedagogies at the core. Plans can be jointly constructed with children and in partnership with families.'
+    },
+    {
+      key: 'implement',
+      label: 'IMPLEMENT',
+      colour: '#1E78BE',
+      title: 'Implement',
+      body: 'Plans become action. Enact and review learning experiences across the day — structured and spontaneous, child-led and adult-initiated, mealtimes, routines, indoor and outdoor. Your intentionality shines here: each teaching move amplifies children\'s learning.'
+    },
+    {
+      key: 'reflect',
+      label: 'REFLECT',
+      colour: '#4FA053',
+      title: 'Reflect · Evaluate',
+      body: 'Ask: What worked, and why? For whom? What will I do differently next time? How can I extend this further? Critical reflection identifies professional learning needs and shapes the next loop of the cycle.'
+    }
+  ];
+
+  // Build donut segments programmatically (5 equal wedges, top-anchored, clockwise)
+  function buildCycle() {
+    const segs = document.getElementById('cycleSegments');
+    const labels = document.getElementById('cycleLabels');
+    const arrows = document.getElementById('cycleArrows');
+    const outerR = 180, innerR = 100;
+    const N = 5;
+    const segAngle = 360 / N;
+    const startAngle = -90 - segAngle / 2; // so the first segment is centred at the top
+
+    cycleSteps.forEach((step, i) => {
+      const a1 = (startAngle + i * segAngle) * Math.PI / 180;
+      const a2 = (startAngle + (i + 1) * segAngle) * Math.PI / 180;
+      // Add a tiny gap between wedges so it looks like petals, not a pie
+      const gap = 0.012; // radians
+      const aa1 = a1 + gap;
+      const aa2 = a2 - gap;
+
+      const p1 = { x: Math.cos(aa1) * outerR, y: Math.sin(aa1) * outerR };
+      const p2 = { x: Math.cos(aa2) * outerR, y: Math.sin(aa2) * outerR };
+      const p3 = { x: Math.cos(aa2) * innerR, y: Math.sin(aa2) * innerR };
+      const p4 = { x: Math.cos(aa1) * innerR, y: Math.sin(aa1) * innerR };
+
+      const largeArc = (aa2 - aa1) > Math.PI ? 1 : 0;
+      const d = [
+        `M ${p1.x.toFixed(2)} ${p1.y.toFixed(2)}`,
+        `A ${outerR} ${outerR} 0 ${largeArc} 1 ${p2.x.toFixed(2)} ${p2.y.toFixed(2)}`,
+        `L ${p3.x.toFixed(2)} ${p3.y.toFixed(2)}`,
+        `A ${innerR} ${innerR} 0 ${largeArc} 0 ${p4.x.toFixed(2)} ${p4.y.toFixed(2)}`,
+        'Z'
+      ].join(' ');
+
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', d);
+      path.setAttribute('fill', step.colour);
+      path.setAttribute('class', 'cycle-segment');
+      path.dataset.step = step.key;
+      // Hover lift handled in CSS via class
+      segs.appendChild(path);
+
+      // Mid-angle label
+      const midAngle = (aa1 + aa2) / 2;
+      const labelR = (outerR + innerR) / 2;
+      const lx = Math.cos(midAngle) * labelR;
+      const ly = Math.sin(midAngle) * labelR;
+      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      text.setAttribute('x', lx.toFixed(2));
+      text.setAttribute('y', (ly + 5).toFixed(2));
+      text.setAttribute('font-size', '13');
+      text.setAttribute('letter-spacing', '1.2');
+      text.textContent = step.label;
+      labels.appendChild(text);
+
+      // Number badge for sequence (1..5)
+      const numR = innerR + 18;
+      const nx = Math.cos(midAngle) * numR;
+      const ny = Math.sin(midAngle) * numR;
+      const numText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      numText.setAttribute('x', nx.toFixed(2));
+      numText.setAttribute('y', (ny + 5).toFixed(2));
+      numText.setAttribute('font-size', '11');
+      numText.setAttribute('opacity', '0.7');
+      numText.textContent = '0' + (i + 1);
+      labels.appendChild(numText);
+    });
+
+    // Click handlers
+    segs.querySelectorAll('.cycle-segment').forEach(seg => {
+      seg.addEventListener('click', () => {
+        const step = cycleSteps.find(s => s.key === seg.dataset.step);
+        const detail = document.getElementById('cycleDetail');
+        detail.innerHTML = `<h5 style="color:${step.colour}">${step.title}</h5><p style="color:var(--eylf-ink);">${step.body}</p>`;
+        // Highlight selected
+        segs.querySelectorAll('.cycle-segment').forEach(s => s.classList.remove('selected'));
+        seg.classList.add('selected');
+      });
+    });
+  }
+  buildCycle();
+
+  // ===== ACTIVITY 1: MATCHING =====
+  const correctPairs = { a: 'a', b: 'b', c: 'c', d: 'd' };
+  let activeLeft = null;
+  let matched = new Set();
+  document.querySelectorAll('#activity1 .match-item').forEach(item => {
+    item.addEventListener('click', () => {
+      if (item.classList.contains('matched')) return;
+      if (item.dataset.side === 'left') {
+        document.querySelectorAll('#activity1 .match-item[data-side="left"]').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        activeLeft = item;
+      } else if (item.dataset.side === 'right' && activeLeft) {
+        if (correctPairs[activeLeft.dataset.id] === item.dataset.id) {
+          item.classList.add('matched');
+          activeLeft.classList.add('matched');
+          activeLeft.classList.remove('active');
+          matched.add(item.dataset.id);
+          if (matched.size === 4) document.getElementById('fb1').classList.add('show');
+        } else {
+          item.style.animation = 'shake 0.4s';
+          setTimeout(() => item.style.animation = '', 400);
+        }
+        activeLeft = null;
+      }
+    });
+  });
+  function resetMatch() {
+    document.querySelectorAll('#activity1 .match-item').forEach(i => {
+      i.classList.remove('active','matched');
+    });
+    matched.clear();
+    activeLeft = null;
+    document.getElementById('fb1').classList.remove('show');
+  }
+
+  // ===== MCQ HANDLER =====
+  function wireMCQ(containerId, feedbackId, correctMessage, incorrectMessage) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.querySelectorAll('.choice').forEach(c => {
+      c.addEventListener('click', () => {
+        if (container.querySelector('.choice.correct')) return;
+        const isCorrect = c.dataset.correct === 'true';
+        container.querySelectorAll('.choice').forEach(x => {
+          if (x.dataset.correct === 'true') x.classList.add('correct');
+        });
+        if (!isCorrect) c.classList.add('incorrect');
+        const fb = document.getElementById(feedbackId);
+        fb.innerHTML = isCorrect
+          ? `<strong>Yes — that's the EYLF-aligned response.</strong> ${correctMessage}`
+          : `<strong>Not quite.</strong> ${incorrectMessage}`;
+        fb.classList.add('show');
+      });
+    });
+  }
+  wireMCQ('mcq2','fb2',
+    'Co-designed goodbye rituals honour Liam\'s relationship with his father, provide predictability (Practice 6 — Continuity &amp; transitions), and centre a key-educator (Principle 1). Documenting and reviewing with the family reflects Partnership and Critical Reflection.',
+    'The most EYLF-aligned response co-designs a goodbye ritual <em>with</em> Liam and his father, uses a consistent key-educator, and documents/reviews after a week. Dismissing the feeling or rushing the goodbye breaks trust and ignores partnership.'
+  );
+  wireMCQ('mcq3','fb3',
+    'Outcome 2 captures fairness, negotiation, cooperative problem-solving with peers, and active contribution to the social environment. (Outcomes 4 and 5 are also touched — remember, outcomes integrate.)',
+    'The strongest fit is Outcome 2 — fairness, negotiation, and cooperative problem-solving with others. Identity, wellbeing and communication are present, but the leading learning here is social-contributory.'
+  );
+  wireMCQ('mcq6','fb6',
+    'When children themselves reflect on what they learned, what surprised them, and what they still wonder about — that\'s assessment <em>as</em> learning. It builds metacognition and learner identity.',
+    'Look again at <em>who</em> is doing the assessing. When children reflect on their own learning — that\'s assessment <em>as</em> learning. Floorbooks and child portfolios are classic tools for this.'
+  );
+
+  // ===== LOCAL SAVE HELPERS =====
+  function saveAnswer(key, num) {
+    const val = document.querySelector(`[data-save="${key}"]`).value;
+    localStorage.setItem('eylf_' + key, val);
+    const fb = document.getElementById('fb' + num);
+    fb.innerHTML = '<strong>Saved locally in your browser.</strong> Bring it (or a printout) to Friday\'s huddle.';
+    fb.classList.add('show');
+  }
+  function revealAnswer(num) {
+    document.getElementById('fb' + num).classList.add('show');
+  }
+  function saveCycle() {
+    ['cycle_observe','cycle_analyse','cycle_plan','cycle_implement','cycle_reflect'].forEach(k => {
+      const el = document.querySelector(`[data-save="${k}"]`);
+      if (el) localStorage.setItem('eylf_' + k, el.value);
+    });
+    const fb = document.getElementById('fb5');
+    fb.innerHTML = '<strong>Planning draft saved.</strong> Notice how the five stages flow into each other — and how documentation runs through all of them.';
+    fb.classList.add('show');
+  }
+  function saveAudit() {
+    ['audit_a','audit_b','audit_c','audit_d','audit_e'].forEach(k => {
+      const el = document.querySelector(`[data-save="${k}"]`);
+      if (el) localStorage.setItem('eylf_' + k, el.value);
+    });
+    const fb = document.getElementById('fb7');
+    fb.innerHTML = '<strong>Audit saved.</strong> Five specific, doable changes is a real plan. Pick one to start with on Monday.';
+    fb.classList.add('show');
+  }
+  // Restore on load
+  document.querySelectorAll('[data-save]').forEach(el => {
+    const stored = localStorage.getItem('eylf_' + el.dataset.save);
+    if (stored) el.value = stored;
+  });
+
+  // Subtle shake keyframes injected at runtime
+  const style = document.createElement('style');
+  style.textContent = `@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }`;
+  document.head.appendChild(style);
+</script>
+</body>
+</html>
