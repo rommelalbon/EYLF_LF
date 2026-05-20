@@ -1983,8 +1983,7 @@
       <h2 class="section-title">Now <span class="underline">you try</span> — 7 hands-on tasks</h2>
       <p class="section-lead">
         These are designed for <em>you</em>, not your children. Type into the boxes — your
-        answers save locally in your browser only. When you're done, print to PDF and bring it
-        to Friday's faculty huddle.
+        answers save locally in your browser only. Please finish it by May 26. When you're done, please save it as PDF then email to me (Teacher Rommel). 
       </p>
     </div>
 
@@ -2385,7 +2384,7 @@
     const val = document.querySelector(`[data-save="${key}"]`).value;
     localStorage.setItem('eylf_' + key, val);
     const fb = document.getElementById('fb' + num);
-    fb.innerHTML = '<strong>✓ Saved locally in your browser.</strong> Bring it (or a printout) to Friday\'s huddle.';
+    fb.innerHTML = '<strong>✓ Saved locally in your browser.</strong> Send it to my email.';
     fb.classList.add('show');
   }
   function revealAnswer(num) {
@@ -2397,7 +2396,7 @@
       if (el) localStorage.setItem('eylf_' + k, el.value);
     });
     const fb = document.getElementById('fb5');
-    fb.innerHTML = '<strong>✓ Planning draft saved!</strong> Notice how the five stages flow into each other — and how documentation runs through all of them.';
+    fb.innerHTML = '<strong>✓ Planning draft saved!</strong> Notice how the five stages flow into each other -- and how documentation runs through all of them.';
     fb.classList.add('show');
     celebrate();
   }
